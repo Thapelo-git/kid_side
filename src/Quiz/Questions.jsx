@@ -1,0 +1,65 @@
+export default [
+    {
+        question:'Whats start with A end with E ?',
+        options:[
+            {
+            id:'0',
+            options:'A',
+            answer:'APE'
+        },
+        {
+            id:'1',
+            options:'B',
+            answer:'APE'
+        },
+        {
+            id:'3',
+            options:'C',
+            answer:'APE'
+        },
+        {
+            id:'4',
+            options:'D',
+            answer:'APE'
+        },
+        {
+            id:'5',
+            options:'E',
+            answer:'APE'
+        },
+    ],
+    correctAnswerIndex:2
+    },
+    {
+        question:"What is 5x5",
+        options:[
+            {
+            id:'0',
+            options:'A',
+            answer:"20"
+        },
+        {
+            id:'1',
+            options:'B',
+            answer:"15"
+        },
+        {
+            id:'2',
+            options:'C',
+            answer:"30"
+        },
+        {
+            id:'3',
+            options:'D',
+            answer:"25"
+        },
+        {
+            id:'4',
+            options:'E',
+            answer:"50"
+        },
+        
+    ],
+    correctAnswerIndex:4
+    }
+]
