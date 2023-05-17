@@ -1,6 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { ProgressSteps, ProgressStep } from 'react-native-progress-steps';
+// https://dribbble.com/shots/13364686-Login-Design-for-App-Warm-up-40
 const SignUp = () => {
   return (
     

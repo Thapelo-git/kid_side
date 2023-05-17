@@ -59,9 +59,11 @@ const QuizScreen = ({ navigation }) => {
     }, [counter])
     useEffect(() => {
         if (index + 1 > data.length) {
+            clearTimeout(interval)
             navigation.navigate('Results', {
                 answers: answer,
                 points: points,
+               
             })
         }
     }, [index])
@@ -76,9 +78,9 @@ const QuizScreen = ({ navigation }) => {
         <SafeAreaView>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', padding: 10 }}>
                 <Text>Quiz Challenge</Text>
-                <Pressable style={{padding:10,backgroundColor:'magenta',borderRadius:20}}>
+                {/* <Pressable style={{padding:10,backgroundColor:'magenta',borderRadius:20}}>
                 <Text style={{color:'white',textAlign:'center',fontWeight:'bold'}} >{counter}</Text>
-                </Pressable>
+                </Pressable> */}
                
             </View>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', marginHorizontal: 10 }}>
@@ -99,10 +101,10 @@ const QuizScreen = ({ navigation }) => {
                 marginTop:20}}/>
             </View>
             <View style={{ backgroundColor: '#f0f8ff', marginTop: 10, padding: 10, borderRadius: 6 }}>
-                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{currentQuestion.question}</Text>
+                <Text style={{ fontSize: 18, fontWeight: 'bold' }}>{currentQuestion?.question}</Text>
             </View>
             <View style={{ marginTop: 12 }}>
-                {currentQuestion.options.map((item, index) => (
+                {currentQuestion?.options.map((item, index) => (
                     <Pressable
                         onPress={() => selectedAnswerIndex === null && setSelectedAnswerIndex(index)}
 

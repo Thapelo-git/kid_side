@@ -10,6 +10,7 @@ import VoiceScreen from './src/Screens/VoiceScreen';
 import SignUp from './src/Screens/SignUp';
 import QuizScreen from './src/Quiz/QuizScreen';
 import ResultsScreen from './src/Quiz/ResultsScreen';
+import HomeScreen from './src/Screens/HomeScreen';
 const Stack = createNativeStackNavigator()
 export default function App() {
 //   const [signedIn,setSignedIn]=useState(false)
@@ -27,8 +28,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown:false}}>
-      <Stack.Screen name="Splash" component={QuizScreen} />
+      <Stack.Screen name="HomeScreen" component={HomeScreen} />
+      <Stack.Screen name="QuizScreen" component={QuizScreen} />
       <Stack.Screen name="Results" component={ResultsScreen} />
+      <Stack.Screen name="Voice" component={VoiceScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );
